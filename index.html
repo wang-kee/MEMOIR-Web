@@ -4,28 +4,26 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta name="description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
+  <meta name="keywords" content="Graph generation, Discrete flow matching, Molecular graphs, SBM, DeFoG, generative models, arXiv 2410.04263">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph for Facebook/LinkedIn -->
+  <meta property="og:title" content="DeFoG: Discrete Flow Matching for Graph Generation"/>
+  <meta property="og:description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
+  <meta property="og:url" content="https://qym7.github.io/DeFoG-Web/"/>
+  <meta property="og:image" content="static/images/main_figure.pdf">
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="DeFoG: Discrete Flow Matching for Graph Generation">
+  <meta name="twitter:description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
+  <meta name="twitter:image" content="static/images/main_figure.pdf">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
   <title>DeFoG: Discrete Flow Matching for Graph Generation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/defog_icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -43,6 +41,11 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
 
@@ -149,7 +152,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Graph generative models are essential across diverse scientific domains by capturing complex distributions over relational data. Among them, graph diffusion models achieve superior performance but face inefficient sampling and limited flexibility due to the tight coupling between training and sampling stages. We introduce DeFoG, a novel graph generative framework that disentangles sampling from training, enabling a broader design space for more effective and efficient model optimization. DeFoG employs a discrete flow-matching formulation that respects the inherent symmetries of graphs. We theoretically ground this disentangled formulation by explicitly relating the training loss to the sampling algorithm and showing that DeFoG faithfully replicates the ground truth graph distribution. Building on these foundations, we thoroughly investigate DeFoG's design space and propose novel sampling methods that significantly enhance performance and reduce the required number of refinement steps. Extensive experiments demonstrate state-of-the-art performance across synthetic, molecular, and digital pathology datasets, covering both unconditional and conditional generation settings. It also outperforms most diffusion-based models with just 5-10% of their sampling steps.
           </p>
         </div>
       </div>
@@ -166,9 +169,15 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/main_figure.pdf" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          <p>
+            One node, \( x^{(n)} \), is selected to illustrate both <em>noising</em> and <em>denoising</em> processes. <br>
+            For <em>noising</em>, DeFoG follows a straight path from the one-hot encoding \( p_1 \) of the clean node to the initial distribution \( p_0 \). <br>
+            For <em>denoising</em>, a network parameterized by \( \theta \) predicts the marginal distributions of the clean graph. There, the node's distribution
+            \( \bm{p}^{\theta, (n)}_{1|t} (\cdot \mid G_t) \) is used to compute its rate matrix
+            \( \bm{R}_t^{\theta,(n)} \) and, subsequently, its probability at the next time point \( t + \Delta t \).
+          </p>
         </h2>
       </div>
       <div class="item">
