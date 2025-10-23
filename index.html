@@ -2,37 +2,35 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
-  <meta name="keywords" content="Graph generation, Discrete flow matching, Molecular graphs, SBM, DeFoG, generative models, arXiv 2410.04263">
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="MEMOIR is a lifelong model editing framework that injects knowledge via a residual memory to minimize overwrite and retain prior capabilities, with sparse, sample-dependent activation and informed retrieval.">
+  <meta name="keywords" content="MEMOIR, model editing, lifelong editing, LLMs, residual memory, sparse activation, retrieval, arXiv 2506.07899">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Open Graph for Facebook/LinkedIn -->
-  <meta property="og:title" content="DeFoG: Discrete Flow Matching for Graph Generation"/>
-  <meta property="og:description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
-  <meta property="og:url" content="https://qym7.github.io/DeFoG-Web/"/>
-  <meta property="og:image" content="static/images/main_figure.pdf">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MEMOIR: Lifelong Model Editing with Minimal Overwrite and Informed Retention for LLMs"/>
+  <meta property="og:description" content="A scalable framework for lifelong model editing using a residual memory with minimal overwrite and informed retention."/>
+  <meta property="og:url" content="https://wang-kee.github.io/MEMOIR-Web/"/>
+  <!-- If/when you add a banner image, uncomment and point to a PNG/JPG -->
+  <!-- <meta property="og:image" content="static/images/memoir_og.png"> -->
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
   <!-- Twitter Cards -->
-  <meta name="twitter:title" content="DeFoG: Discrete Flow Matching for Graph Generation">
-  <meta name="twitter:description" content="We propose DeFoG, a discrete flow matching-based framework for graph generation with improved sampling efficiency and state-of-the-art performance across synthetic and molecular datasets.">
-  <meta name="twitter:image" content="static/images/main_figure.pdf">
+  <meta name="twitter:title" content="MEMOIR: Lifelong Model Editing for LLMs">
+  <meta name="twitter:description" content="Residual-memory-based lifelong model editing with minimal overwrite and informed retention.">
+  <!-- <meta name="twitter:image" content="static/images/memoir_og.png"> -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <title>DeFoG: Discrete Flow Matching for Graph Generation</title>
+  <title>MEMOIR: Lifelong Model Editing with Minimal Overwrite and Informed Retention for LLMs</title>
   <link rel="icon" type="image/x-icon" href="static/images/defog_icon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -49,198 +47,155 @@
 </head>
 <body>
 
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DeFoG: Discrete Flow Matching for Graph Generation</h1>
+            <h1 class="title is-1 publication-title">
+              MEMOIR: Lifelong Model Editing with Minimal Overwrite and Informed Retention for LLMs
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://qym7.github.io/" target="_blank">Yiming Qin </a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="https://manuelmlmadeira.github.io/" target="_blank">Manuel Madeira </a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://people.epfl.ch/dorina.thanou?lang=en" target="_blank">Dorina Thanou,</span>
-                    <span class="author-block">
-                      <a href="https://www.epfl.ch/labs/lts4/people/people-current/frossard/" target="_blank">Pascal Frossard</a>
-                    </span>
-                  </span>
-                  </div>
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">LTS4, EPFL<br>ICML 2025 - Oral Presentation</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2410.04263" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <span class="author-block">Ke Wang<sup>*</sup>,</span>
+              <span class="author-block">Yiming Qin<sup>*</sup>,</span>
+              <span class="author-block">Nikolaos Dimitriadis,</span>
+              <span class="author-block">Alessandro Favero,</span>
+              <span class="author-block">Pascal Frossard</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">LTS4, EPFL<br>arXiv 2025</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/manuelmlmadeira/DeFoG" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2506.07899" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github / Code: coming soon -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-static" aria-disabled="true">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (coming soon)</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2410.04263" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://arxiv.org/abs/2506.07899" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser GIFs -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <!-- Teaser / figures placeholder -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="has-text-centered">
+          <h2 class="subtitle">Teaser figures will appear here soon.</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present <strong>MEMOIR</strong>, a scalable framework for lifelong model editing that adds new knowledge through a
+              <em>residual memory</em>—a dedicated parameter module—while preserving the pre-trained model’s core abilities.
+              During editing, MEMOIR sparsifies input activations with sample-dependent masks so each edit touches a distinct
+              subset of memory parameters, reducing interference. At inference, it retrieves the most relevant edits by
+              matching the sparse activation patterns of new queries to those stored during editing, enabling minimal overwrite
+              and informed retention across many sequential edits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main figure placeholder -->
+  <section class="hero is-small">
     <div class="hero-body">
-      <div class="columns is-centered is-vcentered">
-        <!-- GIF 1 -->
-        <div class="column has-text-centered">
-          <figure class="image" style="display: inline-block;">
-            <img src="static/gifs/qm9_molecule_4.gif" alt="QM9 graph generation">
-            <figcaption>(a) QM9 molecular dataset</figcaption>
-          </figure>
-        </div>
-        <!-- GIF 2 -->
-        <div class="column has-text-centered">
-          <figure class="image" style="display: inline-block;">
-            <img src="static/gifs/sbm_molecule_14.gif" alt="SBM graph generation">
-            <figcaption>(b) Synthetic SBM graph</figcaption>
-          </figure>
-        </div>
-      </div>
-      <h2 class="subtitle has-text-centered mt-4">
-        Graph generation process of <strong>DeFoG</strong> on (a) QM9 molecular dataset and (b) synthetic SBM graphs.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser GIFs -->
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Graph generative models are essential across diverse scientific domains by capturing complex distributions over relational data. Among them, graph diffusion models achieve superior performance but face inefficient sampling and limited flexibility due to the tight coupling between training and sampling stages. We introduce DeFoG, a novel graph generative framework that disentangles sampling from training, enabling a broader design space for more effective and efficient model optimization. DeFoG employs a discrete flow-matching formulation that respects the inherent symmetries of graphs. We theoretically ground this disentangled formulation by explicitly relating the training loss to the sampling algorithm and showing that DeFoG faithfully replicates the ground truth graph distribution. Building on these foundations, we thoroughly investigate DeFoG's design space and propose novel sampling methods that significantly enhance performance and reduce the required number of refinement steps. Extensive experiments demonstrate state-of-the-art performance across synthetic, molecular, and digital pathology datasets, covering both unconditional and conditional generation settings. It also outperforms most diffusion-based models with just 5-10% of their sampling steps.
-          </p>
-        </div>
+      <div class="container has-text-centered">
+        <h2 class="subtitle">Main figure and method diagram will be added here soon.</h2>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-<!-- Main figure with caption -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container has-text-left">
-      <figure class="image" style="display: inline-block;">
-        <img src="static/images/main_figure.png"
-             alt="Illustration of noising and denoising process"
-             style="max-width: 100%; height: auto;">
-      </figure>
-      <h2 class="subtitle mt-4">
-        One node, \( x^{(n)} \), is selected to illustrate both <em>noising</em> and <em>denoising</em> processes. For <em>noising</em>, DeFoG follows a straight path from the one-hot encoding \( p_1 \) of the clean node to the initial distribution \( p_0 \). For <em>denoising</em>, a network parameterized by \( \theta \) predicts the marginal distributions of the clean graph. There, the node's distribution \( {p}^{\theta, (n)}_{1|t} (\cdot \mid G_t) \) is used to compute its rate matrix \( {R}_t^{\theta,(n)} \), and, subsequently, its probability at the next time point \( t + \Delta t \).
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End main figure with caption -->
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Graph Generation Evaluation</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/synthetic.png" alt="Generation example 1">
-        </div>
-        <div class="item">
-          <img src="static/images/molecular.png" alt="Generation example 2">
-        </div>
-        <div class="item">
-          <img src="static/images/conditional.png" alt="Generation example 3">
-        </div>
+  <!-- Results carousel placeholder -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <h2 class="subtitle has-text-centered mt-4">
+          Benchmark results and qualitative examples will appear here soon.
+        </h2>
       </div>
-      <h2 class="subtitle has-text-centered mt-4">
-        State-of-the-art performance of <strong>DeFoG</strong> on synthetic, molecular and conditional graph generation tasks.
-      </h2>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--BibTex citation -->
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @inproceedings{qin2025defog,
-          title     = {DeFoG: Discrete Flow Matching for Graph Generation},
-          author    = {Qin, Yiming and Madeira, Manuel and Thanou, Dorina and Frossard, Pascal},
-          booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
-          year      = {2025},
-        }
+@article{wang2025memoir,
+  title   = {MEMOIR: Lifelong Model Editing with Minimal Overwrite and Informed Retention for LLMs},
+  author  = {Wang, Ke and Qin, Yiming and Dimitriadis, Nikolaos and Favero, Alessandro and Frossard, Pascal},
+  journal = {arXiv preprint arXiv:2506.07899},
+  year    = {2025},
+  note    = {Equal contribution: first two authors}
+}
       </code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
-
+  </section>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                Academic Project Page Template
+              </a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website; we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+              </a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter (optional) -->
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
